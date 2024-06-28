@@ -31,10 +31,11 @@
          uses: gradle/gradle-command-action@v2
          with:
            arguments: assembleDebug
- -name: GH_Chrome
-  uses: ellacamillem/GH_Chrome@test
-  with:
-    credentials: ${{ secrets.GCP_CREDENTIALS}}
-    filename: "Git_Obs"
-    folderID: ${{ secrets.DRIVE_ID}}
-    overwrite: "true"
+           
+       - name: upload apl to google drive
+         uses: ellacamillem/GH_Chrome@test
+         with:
+           credentials: ${{ secrets.GCP_CREDENTIALS}}
+           filename: "Git_Obs"
+           folderID: ${{ secrets.DRIVE_ID}}
+           overwrite: "true"

@@ -33,7 +33,7 @@
            arguments: assembleDebug
            
        - name: upload apl to google drive
-         uses: ./.github/actions/deploy-to-drive@test
+         uses: GH-Chrome/deploy-to-drive@test
          with:
            credentials: ${{ secrets.GCP_CREDENTIALS}}
            filename: "Git_Obs"

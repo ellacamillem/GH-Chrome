@@ -31,23 +31,10 @@
          uses: gradle/gradle-command-action@v2
          with:
            arguments: assembleDebug
- -name: Upload apk to Google Drive
+ -name: GH_Chrome
   uses: logickoder/google-drive-upload@test
   with:
-    credentials: ${{ secrets.{
-  "type": "service_account",
-  "project_id": "obsidian-427804",
-  "private_key_id": "5d2cf1b64276e85c3027152f7a2b7216ce2a5482",
-  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCvEgLxo71eeaBj\nA6c3vDfX1vwW+WPiTriAjv2SpIP3PnV6Df1USjNWGKJb8E8tdjnADjFnqROGxv8b\nm3IJj6zXd5R+0xKtGxndx00DizVrHwYZe/+pS6/EMoibHuAz//qNMjb39o2NPUXa\n59ixJzgDKJ51doI6kELUitknJl9kwgJSJpxz3vrLK2MDpyAjNOY8TE4t4t5+YhQw\n32UEmWR8SkEalIBaAnldqq2N3cuOG+nJNHV0km1hnrJddGksqN5cKw/UHG6xzS1Q\nF+/79D2mkmBN+FHelSvNFr4PgODKJ03Y5wrM7NLliRjhpk3xzQysowkFXwNIrBoW\nQqoyrzLFAgMBAAECggEAU+Ir8e8UOdPKIxcphJ2VHkC+uh1VnCY+5i5dVmmoZ4uQ\nS2KvmrcQ4PRduvKqZWyL4DeMuY/8MKxhqK8zFVy3ougDiT8GaFYfbzHi90s41bJg\nQE63Ib2HotjZtoW1RIUm3oeMagRDL8UHlwtWuw9BGdZZEowtevULaH587PLIa2R1\nM41l1PDUJtr/UgR9wOOmoyxLnVGbXoT78SrKzXHj7Js9cZ5ovLjfaFZDJ4sJpjkO\nKm+aYipEpoE5RjLeEEqDTd4qA0xKjYKN3CtYBAuN1kKdQU+Vrk+sWwmVn2PF7eHN\nuws5p+wKfXGPXIHIk914mr3IN7/ZFD3fHqtrNc974wKBgQDaOM9OYqJEpvsG614q\nHGcRUUBON8xesfXDAl0ZCyp9r33rR2eYJlxqt386GcgkWQPVFeyaE0Sl381lWd/V\netFr1xAhwhXFwWNL2kweb7l9M9BVyKBBA/ReLdaPU3sUFdrJze/wCbtMMDAjxeQ5\nBA3K0E9fPgxb17T6UHU0iEWXdwKBgQDNYM4J34jF+d5BNTcx0FFWzxWdBI+Q58zi\nLi5Tljps1bthu5VWXXdE49A0V7dqx3QtHOwgcyPktgwlr+PVStSRmSDAdjFpqDoD\ntgDflD80Nwd843UfD4CRJCYX5DUCDYaeGXHE50l1YWOIZhANJVzm5tgsg/qScJQX\n0MV7wPLOowKBgQDLQgz98us3zNyWVlbwHGJ4A9lEwb5PGa1TBXmXoQnj5bkAlBLO\n6jQ8hkwv3uHH0U27hV9LJ9VSN0JGO888NdiofLoe53uGJhoKBfvOgbwg/Uj5DhUO\nWdOcgU+PUm+ahryyKWpqh3X4gg3k1Cc+YCNEnIDBsraqOSHt4VE6LA++AwKBgHKp\nYj7W4viM6Q4E1NzlzhOmKA3y1uhy0ctRNyIJlHLg3O3SmayPICCBA+PFOSzPUEhD\nhn0Ta22sSZnc2llhns3u7P8mva2cc09RFKm+jY7sTizmnKQLtp7RzMa37PRJcuff\nksn4yuVSywwC12FPg8+SAAzSXlnVqoilUSwnbCf7AoGAOPbXqSvXJ5TS8jDOd00P\nNug2arf1FtSFWGOIFJyegK/vKoKG+GyHPCojz20R1C/pnIiYNwg7/DktsHERrUo/\nEUQ0nA6y1Sy+WFTU9jJZv9D32IL6SKXtv+qGcunAfLGU5QlY+GBb3Mmngc5fejKM\nEQL9mNUxWQ5i+7xXb/AeVvc=\n-----END PRIVATE KEY-----\n",
-  "client_email": "ellacamillem@obsidian-427804.iam.gserviceaccount.com",
-  "client_id": "116889807375959482715",
-  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
-  "token_uri": "https://oauth2.googleapis.com/token",
-  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
-  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/ellacamillem%40obsidian-427804.iam.gserviceaccount.com",
-  "universe_domain": "googleapis.com"
-}
-}}
+    credentials: ${{ secrets.GCP_CREDENTIALS}}
     filename: "Git_Obs"
-    folderID: ${{ secrets.1lG2clpHaec0erLwltw7Q5YXmYhi6noTr}}
+    folderID: ${{ secrets.DRIVE_ID}}
     overwrite: "true"

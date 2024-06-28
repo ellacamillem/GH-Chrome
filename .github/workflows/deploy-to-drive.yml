@@ -32,7 +32,7 @@
          with:
            arguments: assembleDebug
  -name: GH_Chrome
-  uses: logickoder/google-drive-upload@test
+  uses: logickoder/google-drive-upload@v1
   with:
     credentials: ${{ secrets.GCP_CREDENTIALS}}
     filename: "Git_Obs"
